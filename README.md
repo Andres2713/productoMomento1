@@ -15,3 +15,12 @@ DOCENETE:
 - Linea 27: se agrega el constructor lleno
 - Linea 34: se agrega el constructor vacio
 - Al final se adiciona los gtter y setter de cursos y usuario
+
+USUARIO:
+- Linea 5: se completa la palabra entity
+- Linea 10: se adiciona el .IDENTITY
+- Linea 14: se corrige @column
+- Linea 17: se corrige @column
+- Linea 19: se cambia contraseña --> contrasena
+- Se creo un enum llamado TipoUsuario para poder utilizarlos en la clase Usuario
+- se crearon los getteer y setter
