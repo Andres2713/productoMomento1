@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "docente")
 public class Docente {
 
 
@@ -23,7 +24,15 @@ public class Docente {
     @JsonManagedReference(value = "docente-usuario")
     private Usuario usuario;
 
+    public Docente(Integer id, String especialidad, List<Curso> cursos, Usuario usuario) {
+        this.id = id;
+        this.especialidad = especialidad;
+        this.cursos = cursos;
+        this.usuario = usuario;
+    }
 
+    public Docente() {
+    }
 
     public Integer getId() {
         return id;
@@ -39,5 +48,21 @@ public class Docente {
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
     }
 }
